@@ -64,7 +64,7 @@ class SpecDataElem(TableEntry):
             TableEntry.update(self, "bus", p.bus())
             TableEntry.update(self, "clock", p.clk())
         elif attr == "CPU Characteristics:":
-            TableEntry.update(self, "processor_description", data)
+            TableEntry.update(self, "cpu_characteristics", data)
         elif attr == "CPU MHz:":
             TableEntry.update(self, "clock", data, allowDup=True)
         elif attr == "Parallel:":
