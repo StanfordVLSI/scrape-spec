@@ -158,6 +158,15 @@ class SpecProcessor:
         # attempt to set model name given family, clock, etc
         string4 = self.__setModel__(string3)
 
+        # add i3/5/7 label to model
+        if self.__model[0] == '-':
+            if self.__family == "Core i3":
+                self.__model = "i3" + self.__model
+            elif self.__family == "Core i5":
+                self.__model = "i5" + self.__model
+            elif self.__family == "Core i7":
+                self.__model = "i7" + self.__model
+
 
     def make(self):
         return self.__make
